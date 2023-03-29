@@ -1,27 +1,18 @@
-from functions import importData
-from nevilles import nevilles
-from newtonian import ddt, newtonian
-from hermite import hermite
-from csplines import csplines
+from prob1 import prob1
+from prob2 import prob2
+from prob3 import prob3
+from prob4 import prob4
+#from prob5 import prob5
+#from prob6 import prob6
 
-prob1Data = importData('prob1.input')
-prob1Result = nevilles(prob1Data[0], prob1Data[1], 3.7)
-print(prob1Result, end='\n\n')
-
-prob2Data = importData('prob2.input')
-prob2Matrix = ddt(prob2Data[0], prob2Data[1])
-prob2Result = []
-for i in range(1, 4):
-    prob2Result.append(prob2Matrix[i][i])
-
-print(prob2Result, end='\n\n')
-
-prob3Result = newtonian(prob2Matrix, prob2Data[0], 7.3, 3)
-print(prob3Result, end='\n\n')
-
-prob4Data = importData('prob4.input')
-prob4Result = hermite(prob4Data[0], prob4Data[1], prob4Data[2])
+prob1()
 print()
-
-prob5Data = importData('prob5.input')
-prob5Result = csplines(prob5Data[0], prob5Data[1])
+prob2()
+print()
+prob3()
+print()
+prob4()
+print()
+#prob5()
+print()
+#prob6()
