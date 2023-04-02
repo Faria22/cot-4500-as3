@@ -8,10 +8,9 @@ def prob6():
         if v < 0:
             print(False)
             return
-    t = np.transpose(m)
     for i in range(n):
         for j in range(n):
-            if m[i][j] != t[i][j]:
+            if m[i][j] != m[j][i]:
                 print(False)
                 return
     print(True)
